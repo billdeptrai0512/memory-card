@@ -54,11 +54,12 @@ function App() {
   
   const chooseMode = async (selectedMode) => {
 
+    const characters = await fetchCharacter();
+
     if (startPage) {
       switchPage();
     }
-
-    const characters = await fetchCharacter();
+    
     setMode(selectedMode);
     setCharacters(characters);
 
